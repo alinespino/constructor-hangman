@@ -3,15 +3,35 @@ var inquirer = require ("inquirer");
 var word = require ("./word.js");
 var letter = require ("./letter.js");
 
+console.log(" Hangman Running");
 
 function newGame (){
   
     inquirer.prompt ([{
-        name:"user",
-        type:"input",
-        message: 'Guess a letter'
-    }])
+        name:"newGame",
+        type:"confirm",
+        message: 'Welcome! Guess a letter'
+    }]).then(function(answer){
+        if (answer.newGame === true){
+            console.log(this.word);
+            guessLetter();
+        } else {
+            console.log("Good bye!");
+        }
+    })
 
+    function guessLetter () {
+        inquirer.prompt ([{
+            name:'guess',
+            type:'input',
+            message:"Guess a letter!",
+            validate:letter()
+        }])
+    }
+
+    function validation (){
+        
+    }
     // validate user's guess : 
 
     // IF WRONG: leave word blank,
@@ -25,9 +45,10 @@ function newGame (){
 }
 
 
-function displayWord (){
+// function displayWord (){
+//     console.log(this.word);
 
-}
+// }
 
 
 function zeroGuesses (){
