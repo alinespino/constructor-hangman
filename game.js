@@ -30,7 +30,7 @@ function newGame (){
     }
 
     function validation (){
-        
+
     }
     // validate user's guess : 
 
@@ -59,13 +59,9 @@ function zeroGuesses (){
 }
 
 
-//     CREATE 2 CONSTRUCTORS 
-//   WORD : CURRENT WORD, INCLUDE LOGIC AND DATA.
-//  LETTER 
 
 
-
-
+// INSTRUCTIONS:
     // The completed game should be able to receive user input using the inquirer or prompt npm packages.
     // Feel free to use as many different types of constructor functions as you are able to, 
     // but at a minimum, you must create the following constructor functions:
